@@ -1,0 +1,88 @@
+:root {
+    --primary: rgb(245, 250, 252);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    background-color: var(--primary);
+    font-family: Roboto, sans-serif;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 32px;
+    background-color: rgb(140, 217, 250);
+    border-radius: 35px;
+}
+.navbar ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+#logo {
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(71, 126, 203);
+}
+#logo:hover {
+    cursor: pointer;
+}
+.underline-text {
+    font-size: 20px;
+    color: rgb(71, 126, 203);
+    text-decoration-color: transparent;
+    text-underline-offset: 8px;
+    transition-property: text-decoration-color;
+    transition-duration: 1s;
+}
+.underline-text:hover {
+    text-decoration-color: rgb(71, 126, 203);
+    transition-duration: 1s;
+}
+.main-section {
+    display: flex;
+    padding-top: 80px;
+}
+.advertisement {
+    width: 33%;
+}
+article {
+    width: 33%;
+}
+.main-title {
+    margin-bottom: 20px;
+}
+#leximtari-ad {
+    width: 80%;
+    margin: auto;
+}
+p {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+h2 {
+    font-size: 44px;
+}
+footer {
+    background-color: rgb(99, 94, 116);
+    height: 70px;
+    width: 100%;
+    white-space: nowrap;
+    display: flex;
+}
+footer h2 {
+    width: fit-content;
+    margin: auto;
+    color: white;
+    font-size: 27px;
+}
