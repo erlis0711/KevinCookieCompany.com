@@ -30,10 +30,54 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt sed excepturi officiis voluptates animi nisi numquam temporibus eos harum, eligendi reprehenderit at hic adipisci quae esse vero deleniti corrupti? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus modi optio ut qui rem enim numquam est eum explicabo nobis? Molestiae numquam id voluptates tempora consectetur quo sunt ullam fugiat?</p>
             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi accusantium cumque placeat maiores alias dolores culpa porro velit voluptates, est vel ab libero totam eveniet dignissimos suscipit! Vero, cumque unde?consectetur adipisicing elit. Neque vero in et perferendis quam ullam ad, repellendus rem doloremque vitae! Itaque laboriosam eos corporis ex nihil. Dolorem, temporibus molestiae? Asperiores!</p>
         </article>
-        <div class="advertisement"></div>
+        <!-- RIGHT SIDEBAR WITH TWO SLIDESHOW ADS -->
+        <div class="sidebar-ads">
+
+            <!-- First advertisement -->
+            <a href="https://www.century21albania.com/">
+                <div class="ad-box">
+                    <img class="slide showing" src="/img/ad1.jpg">
+                    <img class="slide" src="/img/ad2.jpg">
+                    <img class="slide" src="/img/ad3.jpg">
+                </div>
+            </a>
+            <h2>Century 21</h2> 
+            
+            <!-- Second advertisement -->
+            <a href="https://antonelas-flavours.com/it?srsltid=AfmBOor1yIo2sOm1hG9vrvlbwT927CIzBswYccfdWOynfWH1ERhBHqEb">
+                <div class="ad-box">
+                    <img class="slide showing" src="/img/ad4.jpg">
+                    <img class="slide" src="/img/ad5.jpg">
+                    <img class="slide" src="/img/ad6.jpg">
+                </div>
+            </a>
+            <h2>Antonela's Flavour</h2>
+            
+
+        </div>
+
     </main>
     <footer>
         <h2>Copyright Erlis Gjergji 2025</h2>
     </footer>
+
+    <script>
+        // Run after page loads
+        document.addEventListener("DOMContentLoaded", function () {
+
+        document.querySelectorAll(".ad-box").forEach(adBox => {
+            let slides = adBox.querySelectorAll(".slide");
+            let current = 0;
+
+            setInterval(() => {
+                slides[current].classList.remove("showing");
+                current = (current + 1) % slides.length;
+                slides[current].classList.add("showing");
+            }, 3000);
+        });
+
+    });
+    </script>
+
 </body>
 </html>

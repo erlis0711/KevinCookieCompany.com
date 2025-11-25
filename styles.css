@@ -86,3 +86,43 @@ footer h2 {
     color: white;
     font-size: 27px;
 }
+
+
+/* Sidebar container */
+.sidebar-ads {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;          /* space between the two ads */
+    padding-top: 20px;
+}
+
+/* Each ad slideshow box */
+.ad-box {
+    width: 250px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* All ad images */
+.ad-box img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.ad-box .showing {
+    opacity: 1;
+}
+
+.sidebar-ads h2 {
+    margin-bottom: 50px;
+    font-size: 30px;
+}
